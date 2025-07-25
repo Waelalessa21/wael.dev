@@ -2,11 +2,15 @@
     border-bottom: 1px solid var(--border-color);
     max-width: var(--section-max-width);
     margin: 0 auto;
+    overflow: hidden; /* Prevent horizontal overflow */
 }
 
 .profile-nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .profile-nav li {
@@ -17,12 +21,13 @@
     cursor: pointer;
     position: relative;
     transition: color 0.3s ease;
+    user-select: none; /* Prevent text selection during touch */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-.profile-nav li:hover {
-    color: var(--primary-color);
-}
-
+/* Remove hover color change - only show active state */
 .profile-nav li.active {
     color: var(--primary-color);
 }
@@ -54,6 +59,7 @@
     animation: fadeIn 0.5s ease;
     max-width: var(--section-max-width);
     margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scrolling in content */
 }
 
 .tab-content.active {

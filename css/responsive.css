@@ -1,3 +1,14 @@
+/* Prevent horizontal scrolling on desktop */
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -73,10 +84,19 @@
         overflow-x: auto;
         white-space: nowrap;
         padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        scrollbar-width: none; /* Hide scrollbar on Firefox */
+        -ms-overflow-style: none; /* Hide scrollbar on IE/Edge */
+    }
+    
+    .profile-nav ul::-webkit-scrollbar {
+        display: none; /* Hide scrollbar on Chrome/Safari */
     }
     
     .profile-nav li {
         padding: 15px 10px;
+        flex-shrink: 0; /* Prevent tabs from shrinking */
+        min-width: fit-content; /* Ensure tabs don't get too small */
     }
     
     .portfolio-grid {
