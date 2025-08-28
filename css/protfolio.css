@@ -348,25 +348,8 @@
     display: none;
 }
 
-#nabeh-vid {
-    pointer-events: none;
-    cursor: default;
-}
 
-#nabeh-vid .video-preview {
-    cursor: default;
-    pointer-events: none;
-}
 
-#nabeh-vid .play-overlay {
-    display: none;
-}
-
-#nabeh-vid .video-label {
-    display: none;
-}
-
-/* Zoom out Nabeh image */
 #nabeh-vid .video-thumbnail img {
     object-fit: cover;
     object-position: center top;
@@ -379,7 +362,6 @@
     }
 }
 
-/* Fix AI-based Triage System image positioning */
 .project-card:has(.video-preview[data-video="vids/Gradproject.mp4"]) .video-thumbnail img {
     object-fit: cover;
     object-position: center top;
